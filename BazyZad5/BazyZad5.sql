@@ -225,17 +225,22 @@ CREATE SCHEMA ksiegowosc;
 
 --DO POPRAWY
 
+	/*SELECT imię,nazwisko,kwota
+    FROM ksiegowosc.pracownicy, ksiegowosc.wynagrodzenie, ksiegowosc.pensja 
+	WHERE ksiegowosc.pracownicy.ID_pracownika=ksiegowosc.wynagrodzenie.ID_pracownika AND ksiegowosc.wynagrodzenie.ID_pensji= ksiegowosc.pensja.ID_pensji
+	DELETE FROM ksiegowosc.pensja WHERE ksiegowosc.pensja.kwota <1000;*/
+
+
+
+/*
 	SELECT * FROM ksiegowosc.pensje
 	SELECT * FROM ksiegowosc.pracownicy
-	--DELETE ksiegowosc.pracownicy()
+	--DELETE ksiegowosc.pracownicy
 	SELECT pracownicy.id_pracownika, pracownicy.imie, pracownicy.nazwisko, pensje.kwota,pracownicy.adres, pracownicy.telefon
 	FROM ksiegowosc.pensje
 	INNER JOIN ksiegowosc.wynagrodzenie ON wynagrodzenie.id_pensji = pensje.id_pensji
 	INNER JOIN ksiegowosc.pracownicy ON wynagrodzenie.id_pracownika = pracownicy.id_pracownika
-	WHERE pensje.kwota < 1800::money; 
-
-
-
+	WHERE pensje.kwota < 1800::money; */
 
 
 
